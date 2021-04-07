@@ -13,10 +13,10 @@ h1 {
     background: -webkit-linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
     border-radius: 10px 10px 0px 0px;
     box-shadow: 7px 8px 12px #e8e8e8;
-    width: 800px;
-    height: 100px;
-    padding: 50px;
-    font-size: 50px;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    font-size: 30px;
     text-align: right;
     }
 
@@ -28,8 +28,8 @@ h1 {
     box-shadow: 7px 8px 12px #e8e8e8;
     width: 800px;
     height: 100px;
-    padding: 50px;
-    font-size: 50px;
+    padding: 10px;
+    font-size: 30px;
     text-align: right;
     /*display: none;*/
     }

@@ -26,25 +26,27 @@
     <br /> <br />
 
     <label for="jmlTest">Masukkan jumlah test</label>
-    <input type="text" id="jmlTest" class="range" size="1">
+    <input type="text" id="jmlTest" class="range" size="1" value="3">
     <br /> <br />
+
 
     <label for="pilihanAudio">Pilihan Audio:</label><br>
     <input type="radio" id="denganAudio" name="pilihanAudio" checked=true value="yes">
     <label for="denganAudio">Dengan Audio</label><br>
     <input type="radio" id="tanpaAudio" name="pilihanAudio" value="no">
-    <label for="tanpaAudio">Tanpa Audio</label><br>
-    <br><br>
+    <label for="tanpaAudio">Tanpa Audio</label><br><br>
 
     <button id="myButton" onclick="togglePlay()">Mulai Test</button>
-    <br /> <br />
-    <p id="demo">random ayat</p>
+    <button id="resetBtn" onclick="resetQuestion()">Reset Question Set</button>
+    <button id="questionBtn" onclick="playQuestion()">Lanjut test</button><br />
+
+    <p id="demo"></p>
     <audio id="myAudio"></audio>
 
-    <div id="card" class="animated bounce"></div>
-    <br /> <br />
-    <button id="show" onclick="showJawaban()">Buka Kunci Jawaban</button>
-    <br /> <br />
+    <div id="card" class="animated"></div><br />
+
+    <button id="jawabanBtn" onclick="showJawaban()">Buka Kunci Jawaban</button><br />
+    <p id="ayatJawaban"></p>
     <div id="jawaban"></div>
 
 
