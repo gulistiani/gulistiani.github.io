@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
-    <title>Test Hafalan Quran</title>
+    <title>Test</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="surat.js"></script>
 </head>
 
 <body>
-
     <h1>Test Hafalan Quran</h1>
-    <p>Klik tombol untuk random ayat</p>
+
+
+    <label for="surat">Pilih Surat:</label>
+    <select id="surat">
+        <option value="2">Al Baqarah</option>
+        <option value="3">Ali Imran</option>
+    </select>
+    <br /><br />
 
     <label for="start">Masukkan range ayat</label>
     <input type="text" id="start" class="range" size="1" value="1">
-    <input type="text" id="end" class="range" size="1" value="3">
+    <input type="text" id="end" class="range" size="1" value="9">
     <br /> <br />
 
-    <button id="myButton" onclick="togglePlay()">Play</button>
+    <label for="jmlTest">Masukkan jumlah test</label>
+    <input type="text" id="jmlTest" class="range" size="1">
     <br /> <br />
-    <p class="demo"></p>
+
+    <label for="pilihanAudio">Pilihan Audio:</label><br>
+    <input type="radio" id="denganAudio" name="pilihanAudio" checked=true value="yes">
+    <label for="denganAudio">Dengan Audio</label><br>
+    <input type="radio" id="tanpaAudio" name="pilihanAudio" value="no">
+    <label for="tanpaAudio">Tanpa Audio</label><br>
+    <br><br>
+
+    <button id="myButton" onclick="togglePlay()">Mulai Test</button>
+    <br /> <br />
+    <p id="demo">random ayat</p>
     <audio id="myAudio"></audio>
 
-    <div id="card">Editable text</div>
+    <div id="card" class="animated bounce"></div>
+    <br /> <br />
+    <button id="show" onclick="showJawaban()">Buka Kunci Jawaban</button>
+    <br /> <br />
+    <div id="jawaban"></div>
 
 
 
