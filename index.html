@@ -2,56 +2,92 @@
 <html>
 
 <head>
-    <title>Test</title>
+    <title>Test Sambung Ayat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png">
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="surat.js"></script>
+    <link rel="icon" href="img/favicon.png">
+    <script type="text/javascript" src="data/data.js"></script>
+    <script type="text/javascript" src="data/surat.js"></script>
 </head>
 
 <body>
-    <h1>Test Hafalan Quran</h1>
+    <h2>Test Sambung Ayat</h2>
 
+    <div id="isian">
+        <label for="surat">Pilih range surat dan ayat: Surat </label>
+        <select id="surat" class="input">
+            <option value="2">Al Baqarah</option>
+            <option value="3">Ali Imran</option>
+        </select>
 
-    <label for="surat">Pilih Surat:</label>
-    <select id="surat">
-        <option value="2">Al Baqarah</option>
-        <option value="3">Ali Imran</option>
-    </select>
-    <br /><br />
+        <label for="start"> dari ayat </label>
+        <input type="text" id="start" class="input" size="1" value="3">
+        <label for="end"> s.d. ayat </label>
+        <input type="text" id="end" class="input" size="1" value="200">
+        <br />
 
-    <label for="start">Masukkan range ayat</label>
-    <input type="text" id="start" class="range" size="1" value="1">
-    <input type="text" id="end" class="range" size="1" value="9">
-    <br /> <br />
+        <label for="jmlTest">Masukkan jumlah test</label>
+        <input type="text" id="jmlTest" class="input" size="1" value="10">
+        <br />
 
-    <label for="jmlTest">Masukkan jumlah test</label>
-    <input type="text" id="jmlTest" class="range" size="1" value="3">
-    <br /> <br />
+        <label for="pilihanAudio">Pilihan Audio:</label>
+        <input type="radio" id="denganAudio" name="pilihanAudio" checked=true value="yes">
+        <label for="denganAudio">Dengan Audio</label>
+        <input type="radio" id="tanpaAudio" name="pilihanAudio" value="no">
+        <label for="tanpaAudio">Tanpa Audio</label>
+        <br>
 
+        <button id="myButton" class="myButton" onclick="togglePlay()">Mulai Test</button>
+        <button id="resetBtn" class="myButton" onclick="resetQuestion()">Reset Question Set</button>
+    </div>
+    <br>
 
-    <label for="pilihanAudio">Pilihan Audio:</label><br>
-    <input type="radio" id="denganAudio" name="pilihanAudio" checked=true value="yes">
-    <label for="denganAudio">Dengan Audio</label><br>
-    <input type="radio" id="tanpaAudio" name="pilihanAudio" value="no">
-    <label for="tanpaAudio">Tanpa Audio</label><br><br>
+    <div id="container_star" class="inline"></div>
+    <audio id="myAudio"></audio><br />
 
-    <button id="myButton" onclick="togglePlay()">Mulai Test</button>
-    <button id="resetBtn" onclick="resetQuestion()">Reset Question Set</button>
-    <button id="questionBtn" onclick="playQuestion()">Lanjut test</button><br />
+    <div id="container" class="flip-card statusSoal">
+        <div class="flip-card-inner">
+            <div class="flip-card-front card">
+                <h6 id="ayatSoal"></h6>
+                <p id="soal"></p>
+                <h6>Silahkan dilanjutkan ...</h6>
+            </div>
+            <div class="flip-card-back">
+                <p id="ayatJawaban"></p>
+                <p id="jawaban"></p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="status">
+        <button id="gagalBtn" class="myButton" onclick="gagal()">&#128557;Hiks, ternyata salah</button>
+        <button id="berhasilBtn" class="myButton" onclick="berhasil()">Alhamdulillah bener&#128512;</button>
+    </div>
 
-    <p id="demo"></p>
-    <audio id="myAudio"></audio>
+    <!---------------------------------------------------------------------------------------->
+    <!-- Trigger/Open The Modal 
+    <button id="myBtn">Open Modal</button> -->
 
-    <div id="card" class="animated"></div><br />
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-    <button id="jawabanBtn" onclick="showJawaban()">Buka Kunci Jawaban</button><br />
-    <p id="ayatJawaban"></p>
-    <div id="jawaban"></div>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h1 id="pesan"></h1>
+            </div>
 
+            <div class="modal-body">
+                <h1 id="nilai"></h1>
+            </div>
 
+            <div class="modal-footer">
+                <h3 id="footer"></h3>
+            </div>
+        </div>
 
-
+    </div>
 
     <script src="index.js" charset="utf-8"></script>
 </body>

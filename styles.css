@@ -1,39 +1,42 @@
 body {
     background-color: #FFF5EA;
+    font-family: Verdana, sans-serif;
+    background-image: url("img/8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1 {
-    color: #968C83;
-    /* #D6D2C4 #F7DAD9*/
+h2 {
+    color: #8e7f7f;
+    text-align: center;
 }
 
-#card {
-    background: linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    background: -moz-linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    background: -webkit-linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    border-radius: 10px 10px 0px 0px;
-    box-shadow: 7px 8px 12px #e8e8e8;
-    width: 400px;
-    height: 50px;
-    padding: 10px;
-    font-size: 30px;
-    text-align: right;
-    }
+.status{
+    text-align: center;
+}
 
-#jawaban {
-    background: linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    background: -moz-linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    background: -webkit-linear-gradient(13deg, #ffd4f4 14%,#d2c5fc 73%);
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 7px 8px 12px #e8e8e8;
-    width: 800px;
+.star {
+    width:20px;
+    height:20px;
+    display: inline;
+}
+
+#container_star{
+    text-align: center;
+}
+
+#isian {
+    background: #EFD3C8;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 7px 8px 12px #8e7f7f;
+    width: 42%;
     height: 100px;
-    padding: 10px;
-    font-size: 30px;
-    text-align: right;
-    /*display: none;*/
-    }
-
+    font-size: 12px;
+    text-align: left;
+    margin: auto;
+    padding: 1% 2% 1% 2%;
+    line-height: 2;
+}
 
 .animated {
     -webkit-animation-duration: 1s;
@@ -59,3 +62,233 @@ h1 {
     animation-name: bounce; 
 }    
 
+
+.flip-card {
+    background-color: transparent; 
+    width: 46%;
+    height: 300px;
+    perspective: 1000px;
+    margin: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #d8ac9c; 
+    color: white;
+    font-size: 35px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 7px 8px 12px #8e7f7f;
+    text-align: rigth;
+}
+
+.flip-card-back {
+    background-color: #8E7F7F;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 7px 8px 12px #797a7e;
+    text-align: rigth;
+
+    transform: rotateY(180deg);
+    
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #d8ac9c 5%, #634b30 100%);
+	background-color:#d8ac9c;
+	border-radius:10px;
+
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:11px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #634b30 5%, #d8ac9c 100%);
+	background-color:#634b30;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.myButton:disabled {
+	position:relative;
+	top:1px;
+    background:#8E7F7F;
+    color: white
+}
+
+/*********************************************************************************************************/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #EFD3C8;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: #8e7f7f;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #8E7F7F;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #8E7F7F;
+    color: white;
+  }
+
+  .input {
+	background-repeat: repeat;
+	background-color: #fff5ea;
+	color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #AAA;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #888;
+    text-align: right;
+}
+       
+.input:disabled {
+	background-repeat: repeat;
+	background-color: #cfcac5;
+	color: rgb(107, 103, 103);
+	border-width: 1px;
+	border-style: solid;
+	border-color: #AAA;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #888;
+    text-align: right;
+}
+
+.roll-in {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes rollIn { 
+    0% { opacity: 0; -webkit-transform: translateX(-100%) rotate(-120deg); } 
+    100% { opacity: 1; -webkit-transform: translateX(0px) rotate(0deg); } 
+} 
+@keyframes rollIn { 
+    0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); } 
+    100% { opacity: 1; transform: translateX(0px) rotate(0deg); } 
+} 
+.rollIn { 
+    -webkit-animation-name: rollIn; 
+    animation-name: rollIn; 
+}
+
+.roll-out {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rollOut { 
+    0% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0px) rotate(0deg); 
+    } 
+    100% { 
+        opacity: 0; 
+        -webkit-transform: translateX(100%) rotate(120deg); 
+    } 
+} 
+@keyframes rollOut { 
+    0% { 
+        opacity: 1; 
+        transform: translateX(0px) rotate(0deg); 
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateX(100%) rotate(120deg); 
+    } 
+} 
+.rollOut { 
+    -webkit-animation-name: rollOut; 
+    animation-name: rollOut; 
+}
